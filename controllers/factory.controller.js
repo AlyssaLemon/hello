@@ -1,4 +1,4 @@
-var Factory = require("../models/factory.js");
+var Factory = require("../models/factory.model.js");
 
 // test
 exports.test = function(req, res) {
@@ -27,8 +27,8 @@ exports.factory_details = function(req, res) {
 
 exports.factory_update = function(req, res) {
   Factory.findByIdAndUpdate(req.params.id, { $set: req.body }, function(
-    err
-    // factory
+    err,
+    factory
   ) {
     if (err) return next(err);
     res.send("Factory udpated.");

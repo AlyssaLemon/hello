@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var factory = require("./routes/factory");
+var factory = require("./routes/factory.route.js");
 var app = express();
 
 var mongoose = require("mongoose");
